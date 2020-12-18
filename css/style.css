@@ -52,6 +52,10 @@ body {
   padding-bottom: 94px;
 }
 
+.section:nth-last-child(3) {
+  padding-bottom: 0;
+}
+
 .conteiner {
   width: 1200px;
   padding-left: 15px;
@@ -155,21 +159,20 @@ body {
 }
 
 .contacts {
+  display: block;
   width: 231px;
 }
 
 .footer-addres {
-  display: inline-flex;
+  display: flex;
   margin-top: 0;
   color: var(--second-title);
+  margin-bottom: 9px;
 }
 
-.footer-list .link {
-  color: var(--footer-contacts-color);
-
+.footer-list:not(:last-child) {
   display: block;
-  padding-bottom: 9px;
-  margin-bottom: 0;
+  margin-bottom: 9px;
 }
 
 /* Герой */
@@ -207,6 +210,7 @@ body {
   border: 0 solid transparent;
   border-radius: 4px;
   padding: 10px 32px;
+  margin-bottom: 200px;
 }
 
 /*  преимуществa компании*/
@@ -291,6 +295,11 @@ body {
   margin-bottom: 30px;
 }
 
+.display-work a {
+  display: flex;
+  padding-bottom: 0;
+}
+
 .team .point {
   margin-top: 0;
   margin-bottom: 30px;
@@ -372,7 +381,7 @@ body {
 }
 
 .box-card {
-  margin: 0 24px 20px;
+  padding: 0 24px 20px;
 }
 
 .box-card .point {
