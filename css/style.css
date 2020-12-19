@@ -1,3 +1,13 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 :root {
   --primari-title: #212121;
   --second-title: #ffffff;
@@ -30,7 +40,7 @@ body {
   font-family: Roboto, sans-serif;
   font-size: 14px;
   font-weight: 400;
-  line-height: 1, 7;
+  line-height: 1.7;
   letter-spacing: 0.03em;
 
   /* background-color: var(--primari-background); */
@@ -230,11 +240,15 @@ body {
 
 .display-advantage {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .adv-list {
-  flex-basis: 270px;
+  width: calc((100% - 90px) / 4);
+}
+
+.adv-list:not(:nth-last-child(-n + 1)) {
+  margin-right: 30px;
 }
 
 .title-list {
@@ -261,6 +275,10 @@ body {
   justify-content: space-between;
 }
 
+.display-work li {
+  width: calc((100% - 60px)/3);
+}
+
 .team {
   font-size: 16px;
   line-height: 2;
@@ -281,7 +299,6 @@ body {
 
 .display-team {
   display: flex;
-  flex-basis: 270px;
   background-color: var(--backgroung-white);
   justify-content: space-between;
 }
@@ -289,6 +306,7 @@ body {
 .display-team > .photo-team {
   background-color: var(--backgroung-white);
   border: 1px solid transparent;
+  width: calc((100% - 90px)/4);
 }
 
 .team img {
@@ -360,9 +378,8 @@ body {
   font-size: 16px;
   line-height: 2;
 
-  display: inline-flex;
+  display: flex;
   flex-wrap: wrap;
-  justify-content: center;
 
   background-color: var(--backgroung-white);
   border: 0;
@@ -370,6 +387,7 @@ body {
 
 .item-portfolio {
   border: 1px solid var(--border-color-card);
+  max-width: calc((100% - 60px) / 3);
 }
 
 .item-portfolio:not(:nth-last-child(-n + 3)) {
@@ -381,7 +399,7 @@ body {
 }
 
 .box-card {
-  padding: 0 24px 20px;
+  padding: 20px 24px;
 }
 
 .box-card .point {
@@ -398,9 +416,4 @@ body {
   color: var(--primari-title);
   margin-top: 0;
   margin-bottom: 4px;
-  min-width: 322px;
-}
-
-.photo {
-  margin-bottom: 20px;
 }
